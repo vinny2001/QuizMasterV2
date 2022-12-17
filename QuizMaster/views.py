@@ -2,6 +2,7 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login as login_process
+from django.contrib.auth import logout
 
 from QuizMaster.forms import StudyForm
 from QuizMaster.models import StudySet
@@ -98,3 +99,9 @@ def add(request, study_set_id):
             return redirect('add_term', name.id)
     terms = Questions.objects.filter(study_set=name)
     return render(request, 'term_and_definition.html', {'form': form, 'name': name, 'terms': terms})
+
+
+def logout_view(request):
+    logout(request)
+    return redirect('home')
+

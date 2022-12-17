@@ -124,8 +124,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-
-STATIC_ROOT = BASE_DIR / 'static'
+# Comment out following line before hosting
+STATICFILES_DIRS = ['static']
+# --- Activate Below Line when Hosting Site, comment out previous line ---
+# STATIC_ROOT = BASE_DIR / 'static'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
