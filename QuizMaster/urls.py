@@ -10,6 +10,6 @@ urlpatterns = [
     path('delete/<int:study_set_id>', views.delete_study_set, name="delete_set"),
     path('index/', views.index, name="index"),
     path('add/<int:study_set_id>', views.add, name="add_term"),
-
+    path('logout/', views.logout_view, name="logout"),
 
 ]
