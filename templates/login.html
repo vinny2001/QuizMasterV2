@@ -13,7 +13,7 @@
 
                 <h1>Login</h1>
                 <br>
-                <form action="{% url 'login' %}" method="post" novalidate>
+                <form action="{% url 'login' %}" method="post" id="login-form">
                     {% csrf_token %}
                     {{form|crispy}}
                     <br>
@@ -22,7 +22,8 @@
                     </button>
 
                     <a href="{% url 'register' %}" class="btn btn-success btn-lg"><i
-                            class="fas fa-plus"></i> Create a new account</a>
+                            class="fas fa-plus"></i> Create a new account
+                    </a>
                 </form>
 
             </div>

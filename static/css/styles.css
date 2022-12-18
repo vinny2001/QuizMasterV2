@@ -58,3 +58,12 @@ html{
 .flashcard{
     cursor: pointer;
 }
+
+.asteriskField {
+    display: none;
+}
+
+#login-form .requiredField{
+    color: white;
+}
+
